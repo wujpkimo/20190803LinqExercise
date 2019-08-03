@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleApp10
+namespace LinqToObjSort
 {
     internal class KVComparer<T, Tkey> : IComparer<KeyValuePair<T, Tkey>>
     {
@@ -64,6 +64,7 @@ namespace ConsoleApp10
                 new Person() { Name = "judy", Age = 15 }
             };
             var result = data.Oby(a => a.Name);
+            var r1 = data.Where(a => a.Name == "Mary").Single();
 
             foreach (var item in result)
             {
