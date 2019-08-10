@@ -42,11 +42,12 @@ namespace LinqToObjDistinct
                 new Person() { Name = "code6421", Age = 15 },
                 new Person() { Name = "mary", Age = 11 },
                 new Person() { Name = "jack", Age = 35 },
+                new Person() { Name = "jack", Age = 31 },
                 new Person() { Name = "mary", Age = 11 },
                 new Person() { Name = "jack", Age = 35 } };
             foreach (var item in data1.Distinct(new PersonEqualComparer()))
             {
-                Console.WriteLine(item.Name);
+                Console.WriteLine(item.Name + ' ' + item.Age);
             }
         }
 
